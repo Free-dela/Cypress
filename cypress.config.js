@@ -1,9 +1,19 @@
-const { defineConfig } = require("cypress");
+const allureWriter = require("@shelex/cypress-allure-plugin/writer");
 
-module.exports = defineConfig({
+/** @type {import('cypress').Config} */
+module.exports = {
   e2e: {
     setupNodeEvents(on, config) {
-      // implement node event listeners here
+      allureWriter(on, config);
+      return config;
     },
   },
-});
+
+  component: {
+    devServer: {
+      framework: "angular",
+      bundler: "webpack",
+    },
+    specPattern: "**/*.cy.ts",
+  },
+};
