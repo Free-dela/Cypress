@@ -93,7 +93,7 @@ describe('Vizza Insurance Login & Application Flow', () => {
     FirstName: 'Care',LastName: 'Supreme',
     email: 'Care@gmail.com',phone: '8531913069',}); 
     enterMemberDetails();selectCityAndPlan();
-    uploadDocuments('C:\\Users\\freed\\OneDrive\\Desktop\\Doc\\TestDoc.jpg');
+    uploadDocuments('C://Users//freed//cypress-test//Assets//TestDoc.jpg');
     fillProposerDetails({
     title: 'MR',firstName: 'Care',lastName: 'Supreme',dob: '09121999',email: 'Care@gmail.com',
     phone: '8531913067',address1: '3',address2: '4',pincode: '600012',city: 'Chennai'});
